@@ -1,4 +1,5 @@
 /* ------------------------------
+   /* ------------------------------
    COLOR VARIABLES
 --------------------------------*/
 :root {
@@ -160,48 +161,43 @@ section h2 {
 /* ------------------------------
    ADVENTURE IMAGES GALLERY
 --------------------------------*/
-/* Style for the second section to arrange the gallery images */
-section {
+/* ------------------------------
+   ADVENTURE AWAITS GALLERY (ONLY THIS SECTION)
+--------------------------------*/
+section.gallery-section {
+    background-color: var(--accent2-color);
     padding: 20px;
-    background-color: #f0f9ff;  /* Light blue background for the section */
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin: 20px 16px;
 }
 
-/* Layout for the figures in a responsive grid */
-section figure {
-    margin: 12px;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.gallery-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     text-align: center;
 }
 
-/* Style for the images inside figure */
-section figure img {
-    width: 100%;  /* Make images responsive */
-    max-width: 280px;  /* Set max width for the images */
-    height: auto;  /* Maintain aspect ratio */
-    border-radius: 8px;  /* Rounded corners for images */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);  /* Optional: add shadow for effect */
-    transition: transform 0.3s ease;  /* Add smooth hover effect */
+.gallery-card img {
+    width: 100%;
+    height: 220px; /* bigger image */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* Slight zoom effect on hover */
-section figure img:hover {
-    transform: scale(1.05);  
-}
-
-/* Use a grid layout for the figures */
-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with 250px min size */
-    gap: 20px; /* Space between items */
-}
-
-/* Style for the figcaptions */
-section figcaption {
+.gallery-card figcaption {
     margin-top: 10px;
-    font-size: 14px;
-    font-weight: normal;
-    color: #003366;  /* Dark color for text */
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* ------------------------------
