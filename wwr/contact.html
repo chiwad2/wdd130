@@ -2,68 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Contact Us - White Water Rafting Adventures</title>
-    <meta name="description"
-        content="Contact White Water Rafting Adventures for questions, bookings, and more information.">
+    <meta charset="UTF-8">
+    <title>Contact Us | White Water Rafting Adventures</title>
+    <meta name="description" content="Contact our rafting specialists for questions and bookings.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Wadson Chadeneneka Chirwa">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/rafting.css">
-</head>
+    <link rel="stylesheet" href="styles/rafting.css" </head>
 
 <body>
+
     <header>
-        <img src="images/logo.png" alt="White Water Rafting Adventures logo" id="site-logo">
+        <img src="images/logo.png" alt="Rafting Logo" id="site-logo">
+
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html" class="active">Contact Us</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h1>Contact Us</h1>
 
-        <section class="contact-info">
-            <h2>Get In Touch</h2>
-            <p><strong>Email:</strong> wadsonchirwa2@gmail.com</p>
-            <p><strong>Phone:</strong> (265) 995462711</p>
-            <p><strong>Address:</strong> Blantyre Chipatala Avenue, Mulanje Adventures, House Number 133</p>
-            <p><strong>Hours:</strong> Mon–Fri 9:00–17:00 | Sat–Sun 8:00–18:00</p>
+        <div class="hero">
+            <img src="images/hero.jpg" alt="Contact Page Hero">
+            <h1>Contact Us</h1>
+        </div>
+
+        <section>
+            <h2>Company Information</h2>
+
+            <p><strong>Address:</strong> Blantyre City, Malawi</p>
+            <p><strong>Phone:</strong> +265 991 234 567</p>
+            <p><strong>Email:</strong> info@raftingadventures.com</p>
+
+            <h3>Find Us on the Map</h3>
+
+            <!-- Working Google Map (Blantyre Malawi) -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d945.3379948659728!2d35.0051!3d-15.7861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921c5f5fefddc67%3A0x1ea5c5a7b9e6ca87!2sBlantyre!5e0!3m2!1sen!2smw!4v1700000000000"
+                width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
         </section>
 
-        <section class="contact-form">
-            <h2>Send us a Message</h2>
-            <form action="#" method="post" novalidate>
-                <label for="name">Name:</label>
-                <input id="name" name="name" type="text" required>
+        <section>
+            <h2>Our Employees</h2>
 
-                <label for="email">Email:</label>
-                <input id="email" name="email" type="email" required>
+            <div class="employees">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Deborah Chirwa">
+                    <figcaption>Deborah Chirwa</figcaption>
+                </figure>
 
-                <label for="phone">Phone:</label>
-                <input id="phone" name="phone" type="tel">
+                <figure>
+                    <img src="images/employee2.jpg" alt="Wadson Chirwa">
+                    <figcaption>Wadson Chirwa</figcaption>
+                </figure>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Meek Chirwa">
+                    <figcaption>Meek Chirwa</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Send Us a Message</h2>
+
+            <form>
+                <label>Full Name:</label>
+                <input type="text" required>
+
+                <label>Email Address:</label>
+                <input type="email" required>
+
+                <label>Purpose of Message:</label>
+                <select>
+                    <option>Trip Booking</option>
+                    <option>General Question</option>
+                    <option>Support</option>
+                </select>
+
+                <label>Your Message:</label>
+                <textarea rows="5" required></textarea>
+
+                <label>
+                    <input type="checkbox"> Subscribe to our newsletter
+                </label>
 
                 <button type="submit">Send Message</button>
             </form>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
+
         <nav class="socialmedia">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="images/facebook.png"
-                    alt="Facebook"></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="images/instagram.png"
-                    alt="Instagram"></a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="images/twitter.png"
-                    alt="Twitter"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
         </nav>
     </footer>
+
 </body>
 
 </html>

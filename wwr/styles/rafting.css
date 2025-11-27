@@ -1,346 +1,228 @@
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-:root {
-    --primary-color: #004a80;
-    --secondary-color: #0077cc;
-    --accent1-color: #ffffff; /* now used */
-    --accent2-color: #e0f0ff;
-
-    --heading-font: 'Arial Black', sans-serif;
-    --body-font: Arial, sans-serif;
-}
-
-/* ------------------------------
-   GLOBAL RESET
---------------------------------*/
+/* UNIVERSAL RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ------------------------------
-   BASE STYLES
---------------------------------*/
+/* BODY */
 body {
-    font-family: var(--body-font);
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #222;
 }
 
-header, main, footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-/* Headings */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* Basic spacing */
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* Remove link underlines in footer icons */
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* ------------------------------
-   HEADER & NAV
---------------------------------*/
+/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 150px auto;
     align-items: center;
-    padding: 16px 0;
-    background: var(--primary-color);
+    background: #003366;
+    padding: 10px 20px;
 }
 
-header img {
-    height: 80px;
-}
-
-nav a {
-    margin-left: 16px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--accent1-color);
-}
-
-/* ------------------------------
-   HERO SECTION (AUDIT FIXED)
---------------------------------*/
-.hero {
-    position: relative; /* REQUIRED */
-}
-
-.hero img {
-    display: block;
-    width: 100%;
+#site-logo {
+    width: 120px;
     height: auto;
 }
 
-/* Hero title overlay */
-.hero h1 {
-    position: absolute; /* REQUIRED */
-    top: 20px;
+/* NAV */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
     width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: rgba(0, 74, 128, 0.65);
-    color: white;
-    font-size: 32px;
-    border-radius: 4px;
+    height: 350px;
+    object-fit: cover;
 }
 
-/* Hero article overlay – REQUIRED by audit */
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px black;
+}
+
+/* HERO ARTICLE FIX */
 .hero article {
-    position: absolute; /* REQUIRED */
-    bottom: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 16px;
-    width: 45%;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 150px auto;
+    gap: 20px;
 }
 
-/* REQUIRED: Float image right */
 .hero article img {
-    float: right;
     width: 150px;
-    margin-left: 12px;
-    border-radius: 8px;
-}
-
-/* ------------------------------
-   MISSION BOX
---------------------------------*/
-.mission {
-    width: 70%;
-    margin: 30px auto;
-    background: rgba(0, 102, 204, 0.35);
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-    text-align: center;
-}
-
-.mission img {
-    width: 200px;
-    display: block;
-    margin: 0 auto 12px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* ------------------------------
-   PAGE SECTIONS
---------------------------------*/
+/* SECTIONS */
 section {
-    padding: 20px;
-    margin-bottom: 30px;
-    background-color: var(--accent2-color);
-    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 section h2 {
     margin-bottom: 10px;
+    color: #003366;
 }
 
-/* ------------------------------
-   ADVENTURE IMAGES GALLERY
---------------------------------*/
-/* ------------------------------
-   ADVENTURE AWAITS GALLERY (ONLY THIS SECTION)
---------------------------------*/
-section.gallery-section {
-    background-color: var(--accent2-color);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 16px;
+/* GLOBAL IMAGE CONTROL — FIXES ALL LARGE IMAGES */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
+/* GALLERY (ABOUT US) */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.gallery-card {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .gallery-card img {
     width: 100%;
-    height: 220px; /* bigger image */
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .gallery-card figcaption {
-    margin-top: 10px;
-    font-size: 16px;
-    color: var(--primary-color);
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
-/* ------------------------------
-   TRIPS SECTION
---------------------------------*/
-.trip-grid {
+/* TRIPS PAGE — FIX HUGE IMAGES */
+.trips-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.trip-card {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+.trips-gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.trips-gallery h3 {
     text-align: center;
+    margin-top: 8px;
+    font-size: 1rem;
 }
 
-.trip-card img {
+/* HOME PAGE FEATURED IMAGES */
+.home-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.home-gallery img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 8px;
-}
-
-/* ------------------------------
-   EQUIPMENT SECTION
---------------------------------*/
-.equipment-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f4f7fb;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
-}
-
-.equipment-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.equipment-list {
-    list-style: none;
-    padding: 0;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.equipment-list li {
-    background: #e6eef8;
-    margin: 10px 0;
-    padding: 12px 16px;
     border-radius: 10px;
-    font-size: 16px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
-/* ------------------------------
-   CONTACT FORM
---------------------------------*/
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 25px;
-    background: #eef3fb;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+/* EMPLOYEES — CONTACT PAGE */
+.employees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.contact-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
+.employees img {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #bbb;
-    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTACT FORM */
+form {
     background: white;
-    font-size: 16px;
-}
-
-.contact-form button {
-    margin-top: 10px;
-    padding: 12px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.contact-form button:hover {
-    background: var(--secondary-color);
-}
-
-/* ------------------------------
-   FOOTER & SOCIAL ICONS
---------------------------------*/
-footer {
-    text-align: center;
     padding: 20px;
-    background: var(--primary-color);
-    color: white;
-    margin-top: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-.socialmedia {
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0055aa;
+}
+
+/* FOOTER */
+footer {
+    background: #003366;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 40px;
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .socialmedia img {
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
-    opacity: 0.85;
-    transition: 0.3s ease;
-}
-
-.socialmedia img:hover {
-    opacity: 1;
-    transform: scale(1.15);
+    margin-left: 15px;
 }
