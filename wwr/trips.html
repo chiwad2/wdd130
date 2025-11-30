@@ -2,60 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Rafting Trips | White Water Rafting Adventures</title>
-    <meta name="description" content="Browse our exciting rafting trip packages.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Wadson Chadeneneka Chirwa">
-    <link rel="stylesheet" href="styles/rafting.css" </head>
+    <meta charset="utf-8">
+    <title>Trips - White Water Rafting Adventures</title>
+    <meta name="description" content="Explore beginner, intermediate and extreme rafting trips.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
 
 <body>
 
     <header>
-        <img src="images/logo.png" alt="Rafting Logo" id="site-logo">
-
+        <img id="site-logo" src="images/logo.png" alt="White Water Rafting Adventures logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html" class="active">Trips</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
+        <h1>Our Trips</h1>
 
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Rafting Trips">
-            <h1>Choose Your Adventure</h1>
+        <div class="trip-grid">
+            <section class="trip-card">
+                <h2>Beginner Rapids</h2>
+                <img src="images/beginner-trip.jpg" alt="Beginner rapids rafting trip">
+                <p>Perfect for families and first-time rafters. Duration: 2 hours.</p>
+                <p><strong>Price:</strong> $49 per person</p>
+            </section>
+
+            <section class="trip-card">
+                <h2>Intermediate Adventure</h2>
+                <img src="images/intermediate-trip.jpg" alt="Intermediate adventure rafting trip">
+                <p>For those with some rafting experience. Duration: 4 hours.</p>
+                <p><strong>Price:</strong> $79 per person</p>
+            </section>
+
+            <section class="trip-card">
+                <h2>Extreme Challenge</h2>
+                <img src="images/extreme-trip.jpg" alt="Extreme challenge rafting trip">
+                <p>Adventure seekers only! Previous rafting experience required. Duration: 6 hours.</p>
+                <p><strong>Price:</strong> $129 per person</p>
+            </section>
         </div>
 
-        <section>
-            <h2>Our Most Popular Trips</h2>
-
-            <div class="trips-gallery">
-                <figure>
-                    <img src="images/beginner-trip.jpg" alt="Beginner rafting">
-                    <h3>Beginner Trip</h3>
-                </figure>
-
-                <figure>
-                    <img src="images/rafting4.jpg" alt="Family rafting">
-                    <h3>Family Adventure</h3>
-                </figure>
-
-                <figure>
-                    <img src="images/extreme-trip.jpg" alt="Extreme rafting">
-                    <h3>Extreme Rapids</h3>
-                </figure>
-            </div>
+        <section class="equipment-section">
+            <h2>Equipment Provided</h2>
+            <ul class="small">
+                <li>Professional-grade rafts</li>
+                <li>Coast Guard approved life jackets</li>
+                <li>Paddles and safety helmets</li>
+                <li>Dry bags for personal items</li>
+                <li>First aid kits</li>
+            </ul>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
-
-        <nav class="socialmedia">
+        <nav class="socialmedia" aria-label="social links">
             <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
             <a href="#"><img src="images/twitter.png" alt="Twitter"></a>

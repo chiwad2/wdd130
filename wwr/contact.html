@@ -2,104 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Us | White Water Rafting Adventures</title>
-    <meta name="description" content="Contact our rafting specialists for questions and bookings.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Wadson Chadeneneka Chirwa">
-    <link rel="stylesheet" href="styles/rafting.css" </head>
+    <meta charset="utf-8">
+    <title>Contact Us - White Water Rafting Adventures</title>
+    <meta name="description" content="Contact White Water Rafting Adventures for inquiries, reservations, and support.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
 
 <body>
 
     <header>
-        <img src="images/logo.png" alt="Rafting Logo" id="site-logo">
-
+        <img id="site-logo" src="images/logo.png" alt="White Water Rafting Adventures logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html" class="active">Contact Us</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
 
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Contact Page Hero">
-            <h1>Contact Us</h1>
-        </div>
+        <h1>Contact Us</h1>
 
-        <section>
-            <h2>Company Information</h2>
-
+        <section class="company-info" aria-label="Company information">
+            <h2>Our Office</h2>
             <p><strong>Address:</strong> Blantyre City, Malawi</p>
-            <p><strong>Phone:</strong> +265 991 234 567</p>
-            <p><strong>Email:</strong> info@raftingadventures.com</p>
-
-            <h3>Find Us on the Map</h3>
-
-            <!-- Working Google Map (Blantyre Malawi) -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d945.3379948659728!2d35.0051!3d-15.7861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921c5f5fefddc67%3A0x1ea5c5a7b9e6ca87!2sBlantyre!5e0!3m2!1sen!2smw!4v1700000000000"
-                width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
-            </iframe>
+            <p><strong>Phone:</strong> +265 995 462 711</p>
+            <p><strong>Email:</strong> wadsonchirwa2@gmail.com</p>
         </section>
 
-        <section>
-            <h2>Our Employees</h2>
+        <section class="container" aria-label="Contact and map">
+            <div class="contact-grid">
+                <!-- map -->
+                <div class="map-box" aria-hidden="false">
+                    <!-- Use q=Blantyre Malawi to avoid pb param errors -->
+                    <iframe src="https://www.google.com/maps?q=Blantyre+Malawi&output=embed" loading="lazy"
+                        title="Blantyre map"></iframe>
+                </div>
 
-            <div class="employees">
+                <!-- form -->
+                <form class="contact-form" action="#" method="post" novalidate>
+                    <label for="fullname">Full name</label>
+                    <input id="fullname" name="fullname" type="text" required>
+
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <p><strong>Purpose of message</strong></p>
+                    <div class="radios">
+                        <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </div>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="newsletter"> Please subscribe me to the monthly
+                            newsletter</label>
+                    </div>
+
+                    <button class="btn-submit" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="employees" aria-label="Employees">
+            <h2>Meet Our Team</h2>
+
+            <div class="employee-grid">
                 <figure>
                     <img src="images/employee1.jpg" alt="Deborah Chirwa">
-                    <figcaption>Deborah Chirwa</figcaption>
+                    <figcaption>Deborah Chirwa — Adventure Guide</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/employee2.jpg" alt="Wadson Chirwa">
-                    <figcaption>Wadson Chirwa</figcaption>
+                    <figcaption>Wadson Chadeneneka Chirwa — Founder & Lead Guide</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/employee33.jpg" alt="Meek Chirwa">
-                    <figcaption>Meek Chirwa</figcaption>
+                    <img src="images/employee3.jpg" alt="Meek Chirwa">
+                    <figcaption>Meek Chirwa — Rafting Specialist</figcaption>
                 </figure>
             </div>
-
-        </section>
-        <section>
-            <h2>Send Us a Message</h2>
-
-            <form>
-                <label>Full Name:</label>
-                <input type="text" required>
-
-                <label>Email Address:</label>
-                <input type="email" required>
-
-                <label>Purpose of Message:</label>
-                <select>
-                    <option>Trip Booking</option>
-                    <option>General Question</option>
-                    <option>Support</option>
-                </select>
-
-                <label>Your Message:</label>
-                <textarea rows="5" required></textarea>
-
-                <label>
-                    <input type="checkbox"> Subscribe to our newsletter
-                </label>
-
-                <button type="submit">Send Message</button>
-            </form>
         </section>
 
     </main>
 
     <footer>
         <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
-
-        <nav class="socialmedia">
+        <nav class="socialmedia" aria-label="social links">
             <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
             <a href="#"><img src="images/twitter.png" alt="Twitter"></a>

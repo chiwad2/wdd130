@@ -3,21 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>White Water Rafting Adventures – About Us</title>
-
+    <title>About Us - White Water Rafting Adventures</title>
     <meta name="description"
-        content="Learn about White Water Rafting Adventures: our mission, history, and dedication to safe, fun river trips.">
+        content="Learn about White Water Rafting Adventures: our mission, history, and commitment to safe and exciting river adventures.">
     <meta name="author" content="Wadson Chadeneneka Chirwa">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
 
     <header>
-        <img src="images/logo.png" alt="White Water Rafting Adventures logo" id="site-logo">
-
+        <img id="site-logo" src="images/logo.png" alt="White Water Rafting Adventures logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About Us</a>
@@ -27,71 +24,77 @@
     </header>
 
     <main>
+        <!-- HERO (must be a div.hero with img + h1 + article) -->
+        <div class="hero" role="banner" aria-label="Hero banner">
+            <img class="hero-img" src="images/hero.jpg" alt="Rafting group navigating river rapids">
+            <h1 class="hero-title">White Water Rafting Adventures</h1>
 
-        <!-- HERO (must be a div, not a section) -->
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Rafting group on the river">
-
-            <h1>White Water Rafting Adventures</h1>
-
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy client">
-
-                <p>
-                    Our mission is to provide safe, thrilling, and unforgettable rafting adventures
-                    guided by trained professionals.
-                </p>
+            <article class="hero-article" aria-labelledby="mission-label">
+                <img class="hero-article-img" src="images/happy-client.jpg" alt="Smiling rafting client">
+                <div class="hero-article-text">
+                    <h2 id="mission-label">Our Mission</h2>
+                    <p>Our mission is to provide safe, thrilling, and unforgettable rafting adventures with experienced
+                        guides and high-quality equipment.</p>
+                </div>
             </article>
         </div>
 
-        <!-- SECTION 1 — REQUIRED -->
+        <!-- SECTION 1: History (exactly one) -->
         <section>
             <h2>History</h2>
             <p>
-                Founded by outdoor enthusiasts, White Water Rafting Adventures has grown into a
-                trusted rafting outfitter offering guided trips for all experience levels.
+                Founded by river enthusiasts, White Water Rafting Adventures began as a small local operation and has
+                grown
+                into a full-service outfitter offering trips for beginners through seasoned rafters. Safety,
+                stewardship,
+                and creating memorable experiences are at the heart of everything we do.
             </p>
         </section>
 
-        <!-- SECTION 2 — REQUIRED -->
+        <!-- SECTION 2: Adventure Awaits (must contain at least five figure elements) -->
         <section>
             <h2>Adventure Awaits You!</h2>
+            <p>Explore our most popular trips and scenery.</p>
 
-            <figure>
-                <img src="images/exciting-rapids.jpg" alt="Exciting rapids">
-                <figcaption>Exciting Rapids</figcaption>
-            </figure>
+            <div class="gallery" aria-label="Photo gallery">
+                <figure class="gallery-card">
+                    <img src="images/exciting-rapids.jpg" alt="Exciting rapids">
+                    <figcaption>Exciting Rapids</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/group-rafting.jpg" alt="Group rafting">
-                <figcaption>Group Rafting</figcaption>
-            </figure>
+                <figure class="gallery-card">
+                    <img src="images/group-rafting.jpg" alt="Group rafting">
+                    <figcaption>Group Rafting</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/rafting5.jpg" alt="Scenic river view">
-                <figcaption>Scenic River View</figcaption>
-            </figure>
+                <figure class="gallery-card">
+                    <img src="images/rafting3.jpg" alt="Scenic river view">
+                    <figcaption>Scenic River View</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/rafting3.jpg" alt="Sunset rafting">
-                <figcaption>Sunset Rafting</figcaption>
-            </figure>
+                <figure class="gallery-card">
+                    <img src="images/rafting4.jpg" alt="Sunset rafting">
+                    <figcaption>Sunset Rafting</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/rafting4.jpg" alt="Fast river ride">
-                <figcaption>Fast River Ride</figcaption>
-            </figure>
+                <figure class="gallery-card">
+                    <img src="images/rafting5.jpg" alt="Fast river ride">
+                    <figcaption>Fast River Ride</figcaption>
+                </figure>
+            </div>
         </section>
 
     </main>
 
     <footer>
         <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
-
-        <nav class="socialmedia">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <nav class="socialmedia" aria-label="social links">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="images/facebook.png"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="images/instagram.png"
+                    alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="images/twitter.png"
+                    alt="Twitter"></a>
         </nav>
     </footer>
 
