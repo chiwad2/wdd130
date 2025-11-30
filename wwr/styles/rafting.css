@@ -1,378 +1,399 @@
 /* ==========================
-   Variables + Universal Reset
+   styles/rafting.css
+   Single stylesheet for all pages
    ========================== */
+
+/* VARIABLES + RESET */
 :root{
-  --primary:#00366a;      /* accessible dark blue */
-  --accent:#0077cc;       /* brighter accent */
-  --bg:#f4f6fb;
-  --card:#ffffff;
-  --muted:#6b6b6b;
-  --brand:#004a80;
-  --btn:#0055aa;
-  --success:#0a8a5f;
-  --max-width:1100px;
-  --gap:20px;
-  --radius:10px;
+  --primary: #00366a;     /* header/footer dark blue */
+  --accent: #6b4cff;      /* purple used in sections */
+  --btn: #0055aa;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --muted: #666;
+  --brand: #004a80;
+  --max-width: 1100px;
+  --gap: 20px;
+  --radius: 10px;
   --font-heading: 'Arial Black', sans-serif;
   --font-body: Arial, Helvetica, sans-serif;
 }
 
+/* Universal reset (required) */
 *,
 *::before,
-*::after{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ==========================
-   Base
-   ========================== */
-html,body{height:100%;}
-body{
-  font-family:var(--font-body);
-  background:var(--bg);
-  color:#222;
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
+/* Base */
+html,body { height: 100%; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: #222;
+  line-height: 1.5;
 }
 
+/* Page container (keeps content centered & consistent) */
 .container {
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* ==========================
-   Header (grid) + Nav (flex)
-   ========================== */
-header{
-  background:var(--primary);
-  color:white;
-  padding:14px 20px;
-  display:grid;
+/* -------------------------
+   HEADER (grid) + NAV (flex)
+   ------------------------- */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 20px;
+  display: grid;
   grid-template-columns: 160px 1fr;
-  align-items:center;
-  gap:16px;
+  align-items: center;
+  gap: 12px;
 }
 
-#site-logo, .logo{
-  width:140px;
-  height:auto;
-  display:block;
+#site-logo, .logo {
+  width: 140px;
+  height: auto;
+  display: block;
 }
 
-nav{
-  display:flex;
-  justify-content:flex-end;
-  gap:14px;
-  align-items:center;
+/* nav layout - flex */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  align-items: center;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  padding:8px 12px;
-  border-radius:6px;
-  font-weight:700;
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.06);
 }
-nav a.active,
-nav a:hover{
-  background:rgba(255,255,255,0.08);
-}
-
-/* ==========================
-   Hero (image + overlay)
-   - .hero (relative)
-   - h1 + article (absolute)
-   ========================== */
-.hero{
-  position:relative; /* required by audit */
-  width:100%;
-  max-width:var(--max-width);
-  margin:20px auto;
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+nav a.active {
+  background: rgba(255,255,255,0.15);
 }
 
-.hero-img{
-  display:block;
-  width:100%;
-  height:380px;
-  object-fit:cover;
+/* -------------------------
+   HERO (div.hero) - required structure
+   - .hero is relative, h1 and article are absolute overlays
+   ------------------------- */
+.hero {
+  position: relative; /* required by audit */
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 20px auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  background: var(--card);
 }
 
-/* h1 overlay */
-.hero-title{
-  position:absolute; /* required */
-  top:18px;
-  left:50%;
-  transform:translateX(-50%);
-  color:#fff;
-  background:rgba(0,0,0,0.35);
-  padding:12px 20px;
-  border-radius:8px;
-  font-family:var(--font-heading);
-  font-size:28px;
-  text-align:center;
-  line-height:1.1;
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
 }
 
-/* article overlay (must be absolute) */
-.hero-article{
-  position:absolute; /* required */
-  right:22px;
-  bottom:22px;
-  width:min(520px, 84%);
-  background:rgba(255,255,255,0.92);
-  padding:14px;
-  border-radius:10px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+/* h1 overlay on hero */
+.hero-title {
+  position: absolute; /* required */
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: rgba(0,0,0,0.36);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  text-align: center;
+  z-index: 3;
 }
 
-/* float-right requirement for article image: use float to satisfy checker */
-.hero-article-img{
-  width:120px;
-  height:110px;
-  object-fit:cover;
-  border-radius:8px;
-  float:right; /* required by the audit checker */
+/* hero article overlay - must be absolute and contain an image floated right */
+.hero-article {
+  position: absolute; /* required */
+  right: 22px;
+  bottom: 22px;
+  width: min(520px, 86%);
+  background: rgba(255,255,255,0.96);
+  padding: 14px;
+  border-radius: 10px;
+  display: block;
+  z-index: 3;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* text area inside article */
-.hero-article-text h2{
-  margin-bottom:6px;
-  color:var(--brand);
-  font-size:18px;
-}
-.hero-article-text p{
-  color:#333;
-  font-size:14px;
-}
-
-/* Clear floats inside hero article (so layout stays consistent) */
-.hero-article::after{
-  content:"";
-  display:block;
-  clear:both;
+/* image inside article should float right per audit requirements */
+.hero-article-img {
+  width: 120px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  float: right; /* required by checker */
+  margin-left: 12px;
 }
 
-/* ==========================
-   Sections
-   - main must have exactly two sections for about page
-   ========================== */
-main{
-  max-width:var(--max-width);
-  margin:20px auto;
-  padding:0 18px 36px;
+/* ensure article text clears floats */
+.hero-article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* -------------------------
+   MAIN SECTIONS
+   ------------------------- */
+main {
+  max-width: var(--max-width);
+  margin: 12px auto 48px;
+  padding: 0 18px;
 }
 
 /* Generic section card */
 section {
-  background:var(--card);
-  border-radius:var(--radius);
-  padding:18px;
-  margin:18px 0;
-  box-shadow:0 6px 16px rgba(0,0,0,0.04);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
 }
 
-/* heading style */
-h1,h2{
-  color:var(--brand);
-  font-family:var(--font-heading);
+/* Typography */
+h1, h2 {
+  color: var(--brand);
+  font-family: var(--font-heading);
 }
-h1{font-size:32px;margin-bottom:12px;}
-h2{font-size:20px;margin-bottom:10px;}
+h1 { font-size: 28px; margin-bottom: 8px; text-align: center; }
+h2 { font-size: 20px; margin-bottom: 10px; }
 
-/* text */
-p{color:#333;font-size:15px;}
+/* paragraphs */
+p { color: #333; font-size: 15px; }
 
-/* ==========================
-   About gallery: exactly >=5 figures
-   Use a responsive grid and controlled image sizes
-   ========================== */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:16px;
-  margin-top:12px;
-  align-items:start;
-}
-
-.gallery-card{
-  background:var(--card);
-  border-radius:8px;
-  overflow:hidden;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.06);
-  padding-bottom:10px;
+/* -------------------------
+   ABOUT PAGE GALLERY (>=5 figures)
+   use consistent image sizes
+   ------------------------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+  align-items: start;
 }
 
-.gallery-card img{
-  width:100%;
-  height:160px; /* consistent */
-  object-fit:cover;
-  display:block;
+.gallery-card {
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  background: var(--card);
 }
 
-.gallery-card figcaption{
-  padding:10px 8px;
-  color:var(--brand);
-  font-weight:700;
-  font-size:14px;
+.gallery-card img {
+  width: 100%;
+  height: 160px; /* consistent heights to avoid scattered sizes */
+  object-fit: cover;
+  display: block;
 }
 
-/* ==========================
-   Trips grid (used on trips.html)
-   ========================== */
-.trip-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:18px;
-  margin-top:12px;
+.gallery-card figcaption {
+  padding: 10px 8px;
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 14px;
 }
 
-.trip-card{
-  background:var(--card);
-  padding:14px;
-  border-radius:8px;
-  box-shadow:0 6px 14px rgba(0,0,0,0.06);
-  text-align:center;
-}
-.trip-card img{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  border-radius:6px;
+/* -------------------------
+   TRIPS GRID (trips.html)
+   ------------------------- */
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
 }
 
-/* ==========================
-   Employees (contact page)
-   ========================== */
-.employee-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
-  gap:16px;
-  margin-top:12px;
+.trip-card {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  text-align: center;
 }
-.employee-grid figure{
-  background:var(--card);
-  border-radius:8px;
-  padding:10px;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-.employee-grid img{
-  width:120px;
-  height:120px;
-  object-fit:cover;
-  border-radius:8px;
-  margin:0 auto 8px;
-}
-.employee-grid figcaption{
-  font-weight:700;
-  color:var(--brand);
+.trip-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-/* ==========================
-   Contact form + map
-   ========================== */
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  align-items:start;
+/* -------------------------
+   CONTACT PAGE: company info + map/form grid
+   ------------------------- */
+.company-info-top {
+  text-align: center;
+  margin: 18px auto;
 }
-.map-box iframe{
-  width:100%;
-  height:300px;
-  border:0;
-  border-radius:8px;
+
+.map-form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 8px auto 0;
 }
-form.contact-form{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+
+/* map box */
+.map {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
 }
-.contact-form label{font-weight:600;font-size:14px;color:#222;}
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* contact form column */
+.contact-form {
+  display: block;
+  background: var(--card);
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form label { font-weight: 600; color: #222; font-size: 14px; }
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form textarea,
-.contact-form select{
-  padding:10px;
-  border-radius:8px;
-  border:1px solid #cfcfcf;
-  font-size:14px;
-  width:100%;
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 14px;
+  width: 100%;
 }
-.contact-form textarea{min-height:120px;resize:vertical;}
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+/* radios/checkbox group */
 .contact-form .radios,
-.contact-form .checkbox{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  flex-wrap:wrap;
+.contact-form .checkbox {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.contact-form .checkbox label{font-weight:500;color:#333;}
-.btn-submit{
-  display:inline-block;
-  background:var(--btn);
-  color:white;
-  border:none;
-  padding:10px 14px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:700;
-}
-.btn-submit:hover{background:darken(var(--btn),8%);}
 
+/* submit button */
+.btn-submit {
+  display: inline-block;
+  background: var(--btn);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-submit:hover { background: #004f9a; }
+
+/* -------------------------
+   EMPLOYEES section (wireframe)
+   ------------------------- */
+.employees {
+  background: #f2eaff;   /* light purple strip similar to wireframe */
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #d7cfff;
+  border-radius: 6px;
+}
+.employees h2 { text-align: center; margin-bottom: 16px; }
+.employee-grid {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+.employee-grid figure {
+  text-align: center;
+  width: 160px;
+}
+.employee-grid img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 8px;
+}
+.employee-grid figcaption {
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 0.95rem;
+}
+
+/* -------------------------
+   FOOTER - blue with bold white text and social icons
+   ------------------------- */
 footer {
-    background: var(--primary) !important; /* FORCE BLUE */
-    color: white !important;               /* FORCE WHITE TEXT */
-    padding: 18px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    border-top: 4px solid rgba(255, 255, 255, 0.04);
+  background: var(--primary); /* keep footer blue as requested */
+  color: white;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 4px solid rgba(255,255,255,0.04);
 }
-
 footer p {
-    color: white !important;   /* TEXT ALWAYS VISIBLE */
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 0;
+  color: white;
+  font-weight: 700; /* bold */
+  margin: 0;
 }
-
-/* social icons */
 .socialmedia {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
-
 .socialmedia a img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    display: block;
-    opacity: 0.95;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.95;
 }
 
+/* -------------------------
+   Utility & responsive
+   ------------------------- */
+.center { text-align: center; }
+.small { font-size: 13px; color: var(--muted); }
 
-/* ==========================
-   Utility / responsive
-   ========================== */
-.center{text-align:center;}
-.small{font-size:13px;color:var(--muted);}
-
-@media (max-width:900px){
-  .hero-img{height:260px;}
-  .hero-article{position:static;margin:12px;padding:12px;display:flex;align-items:center;}
-  .contact-grid{grid-template-columns:1fr;}
-  footer{flex-direction:column;align-items:flex-start;}
+@media (max-width: 900px) {
+  .hero-img { height: 240px; }
+  .hero-article { position: static; margin: 12px; padding: 12px; }
+  .map-form-section { grid-template-columns: 1fr; }
+  .employee-grid { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 20px; }
+  header { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
+  nav { justify-content: center; flex-wrap: wrap; }
 }
