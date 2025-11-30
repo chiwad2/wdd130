@@ -330,28 +330,39 @@ form.contact-form{
 }
 .btn-submit:hover{background:darken(var(--btn),8%);}
 
-/* ==========================
-   Footer (single <p> and social nav)
-   ========================== */
-footer{
-  background:var(--primary);
-  color:white;
-  padding:18px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  border-top:4px solid rgba(255,255,255,0.04);
+footer {
+    background: var(--primary) !important; /* FORCE BLUE */
+    color: white !important;               /* FORCE WHITE TEXT */
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 4px solid rgba(255, 255, 255, 0.04);
 }
-footer p{font-size:14px;}
-.socialmedia{display:flex;gap:10px;align-items:center;}
-.socialmedia a img{
-  width:28px;
-  height:28px;
-  object-fit:contain;
-  display:block;
-  opacity:0.95;
+
+footer p {
+    color: white !important;   /* TEXT ALWAYS VISIBLE */
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
 }
+
+/* social icons */
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.socialmedia a img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    opacity: 0.95;
+}
+
 
 /* ==========================
    Utility / responsive
