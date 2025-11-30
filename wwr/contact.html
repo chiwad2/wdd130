@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>White Water Rafting Adventures – Contact Us</title>
 
-    <meta name="description"
-        content="Contact White Water Rafting Adventures for inquiries, reservations, and customer support.">
+    <meta name="description" content="Contact White Water Rafting Adventures for inquiries, reservations, and support.">
     <meta name="author" content="Wadson Chadeneneka Chirwa">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,55 +26,40 @@
         </nav>
     </header>
 
-    <main class="container contact-page">
+    <main class="container">
 
         <h1>Contact Us</h1>
 
-        <!-- COMPANY INFO + MAP -->
-        <section class="company-info">
-            <div class="info-text">
-                <h2>Our Office</h2>
-                <p><strong>Address:</strong> Chirimba Industrial Area, Near McSteel, Blantyre, Malawi</p>
-                <p><strong>Phone:</strong> +265 995462711,+265 995657013</p>
-                <p><strong>Email:</strong> wadsonchirwa2@gmail.com</p>
-            </div>
+        <!-- ========================= -->
+        <!-- COMPANY INFO + MAP (SIDE-BY-SIDE, LIKE WIREFRAME) -->
+        <!-- ========================= -->
+        <section class="contact-grid">
 
             <div class="map">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.385087627183!2d35.00408957497387!3d-15.82583348484656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d2bb9c4bbcaf%3A0xa7c7b1e60d82e0f1!2sMcSteel%20Company%20Ltd%20-%20Blantyre!5e0!3m2!1sen!2smw!4v1732978000000"
-                    allowfullscreen loading="lazy">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.385087627183!2d35.00408957497387!3d-15.82583348484656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d2bb9c4bbcaf%3A0xa7c7b1e60d82e0f1!2sMcSteel%20Company%20Ltd%20-%20Blantyre!5e0!3m2!1sen!2smw!4v1700000000000"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-        </section>
 
 
-        <!-- EMPLOYEES -->
-        <section class="employees">
-            <h2>Meet Our Team</h2>
-
-            <div class="employee-grid">
-                <figure>
-                    <img src="images/employee1.jpg" alt="Lead Guide John">
-                    <figcaption>Deborah M Chirwa — Lead Guide</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/employee2.jpg" alt="Safety Manager Sarah">
-                    <figcaption>Wadson Chadeneneka Chirwa — Safety Manager</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/employee33.jpg" alt="Customer Support Mike">
-                    <figcaption>Aubren Mujapambeweka Chirwa — Customer Support</figcaption>
-                </figure>
+            <div class="info-text">
+                <h2>White Water Rafting Company</h2>
+                <p>Chirimba Industrial Area<br>Near McSteel<br>Blantyre, Malawi</p>
+                <p><strong>Phone:</strong> +265 995462711 / +265 995657013</p>
+                <p><strong>Email:</strong> wadsonchirwa2@gmail.com</p>
             </div>
+
         </section>
 
-        <!-- CONTACT FORM -->
-        <section class="contact-form-section">
+        <!-- ========================= -->
+        <!-- CONTACT FORM (MATCHING WIREFRAME STRUCTURE) -->
+        <!-- ========================= -->
+        <section>
             <h2>Send Us a Message</h2>
 
-            <form>
+            <form class="contact-form">
 
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" required>
@@ -83,47 +67,77 @@
                 <label for="email">Email Address</label>
                 <input type="email" id="email" required>
 
-                <p><strong>Purpose of Message:</strong></p>
+                <label><strong>Message Purpose:</strong></label>
 
-                <!-- FIXED RADIO BUTTONS WITH IDs -->
-                <label for="purpose1">
-                    <input type="radio" name="purpose" id="purpose1" value="General Inquiry" required>
-                    General Inquiry
-                </label>
+                <div class="radios">
+                    <label for="purpose1">
+                        <input type="radio" name="purpose" id="purpose1" value="General Inquiry" required>
+                        General Inquiry
+                    </label>
 
-                <label for="purpose2">
-                    <input type="radio" name="purpose" id="purpose2" value="Reservation Question">
-                    Reservation Question
-                </label>
+                    <label for="purpose2">
+                        <input type="radio" name="purpose" id="purpose2" value="Reservation Question">
+                        Reservation Question
+                    </label>
 
-                <label for="purpose3">
-                    <input type="radio" name="purpose" id="purpose3" value="Website Suggestion">
-                    Website Suggestion
-                </label>
+                    <label for="purpose3">
+                        <input type="radio" name="purpose" id="purpose3" value="Website Suggestion">
+                        Website Suggestion
+                    </label>
+                </div>
 
                 <label for="message">Message</label>
                 <textarea id="message" required></textarea>
 
-                <!-- FIXED CHECKBOX WITH ID -->
-                <label class="news" for="newsletter">
+                <label class="checkbox" for="newsletter">
                     <input type="checkbox" id="newsletter">
                     Please subscribe me to the monthly newsletter
                 </label>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn-submit">Send Message</button>
             </form>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- EMPLOYEES SECTION (3 CARDS, LIKE WIREFRAME) -->
+        <!-- ========================= -->
+        <section>
+            <h2 class="center">We Are Here to Serve You</h2>
+
+            <div class="employee-grid">
+
+                <figure>
+                    <img src="images/employee1.jpg" alt="Lead Guide Deborah">
+                    <figcaption>Deborah M Chirwa — Lead Guide</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee2.jpg" alt="Safety Manager Wadson">
+                    <figcaption>Wadson Chadeneneka Chirwa — Safety Manager</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee33.jpg" alt="Customer Support Aubren">
+                    <figcaption>Aubren Mujapambeweka Chirwa — Customer Support</figcaption>
+                </figure>
+
+            </div>
         </section>
 
     </main>
 
+    <!-- ========================= -->
+    <!-- FIXED FOOTER (BLUE + ICONS) -->
+    <!-- ========================= -->
     <footer>
         <p>© 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
-        <nav class="socialmedia" aria-label="social links">
+
+        <nav class="socialmedia">
             <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
             <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
         </nav>
-    </footer>
     </footer>
 
 </body>
