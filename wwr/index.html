@@ -1,10 +1,9 @@
-<!doctype html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>White Water Rafting Adventures - Home</title>
-    <meta name="description" content="Book thrilling rafting trips with White Water Rafting Adventures.">
+    <title>About Us - White Water Rafting Adventures</title>
+    <meta name="description"
+        content="Learn about White Water Rafting Adventures: our mission, history, and commitment to safe and exciting river adventures.">
+    <meta name="author" content="Wadson Chadeneneka Chirwa">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -14,46 +13,69 @@
     <header>
         <img id="site-logo" src="images/logo.png" alt="White Water Rafting Adventures logo">
         <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main class="container">
+
+        <!-- HERO (already styled in your CSS) -->
         <section class="hero" aria-label="Home hero">
             <img class="hero-img" src="images/hero.jpg" alt="Rafting action on the river">
             <h1 class="hero-title">Experience the Thrill of Rafting</h1>
         </section>
 
-        <section class="home-grid">
-            <div class="trip-card">
-                <h2>Why Choose Us?</h2>
-                <p>Top-rated guides, safe equipment, and breathtaking river routes.</p>
-            </div>
+        <!-- NEWSLETTER SIGNUP -->
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+            <div class="container">
+                <h2 id="newsletter-heading" class="center">Join Our Newsletter</h2>
+                <form class="newsletter-form" action="#" method="post" novalidate>
+                    <label for="nl-name" class="sr-only">Name</label>
+                    <input id="nl-name" name="name" type="text" placeholder="Your name" required>
 
-            <div class="trip-card">
-                <h2>Our Mission</h2>
-                <p>Creating memorable outdoor experiences for families and thrill-seekers.</p>
-            </div>
+                    <label for="nl-email" class="sr-only">Email</label>
+                    <input id="nl-email" name="email" type="email" placeholder="Your email" required>
 
-            <div class="trip-card">
-                <h2>Adventure For Everyone</h2>
-                <p>Beginner-friendly to extreme rapid expeditions.</p>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 White Water Rafting Adventures | Adventure Awaits</p>
-        <nav class="socialmedia" aria-label="social links">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-        </nav>
-    </footer>
+        <!-- CALL TO ACTION -->
+        <section class="cta container">
+            <h2 class="center">Ready for an Adventure?</h2>
+            <p class="center">See our trip options and pick the run that fits your thrill level.</p>
+            <div class="center" style="margin-top:12px;">
+                <a href="trips.html" class="btn btn-cta">View Trips</a>
+            </div>
+        </section>
+
+        <!-- TWO-COLUMN GRID: info + images -->
+        <section class="grid container" aria-label="Site overview">
+            <article class="grid-card">
+                <img src="images/rafting1.jpg" alt="Rafting on river" class="card-image">
+                <h3>Our Mission</h3>
+                <p>We deliver safe, exciting, and educational river trips for families, groups, and experienced rafters.
+                </p>
+            </article>
+
+            <article class="grid-card">
+                <img src="images/rafting2.jpg" alt="Guides and gear" class="card-image">
+                <h3>Why Choose Us</h3>
+                <p>Certified guides, quality equipment, and local knowledge make our trips both thrilling and safe.</p>
+            </article>
+        </section>
+        <footer>
+            <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
+            <nav class="socialmedia" aria-label="social links">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            </nav>
+        </footer>
 
 </body>
-
-</html>
+</main>
