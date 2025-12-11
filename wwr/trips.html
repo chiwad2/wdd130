@@ -1,94 +1,69 @@
-<main class="container">
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trips - White Water Rafting Adventures</title>
+    <meta name="description"
+        content="Explore our exciting white water rafting trips. Choose from beginner to advanced levels with professional guides.">
+    <meta name="author" content="Wadson Chadeneneka Chirwa">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
 
     <header>
-        <img src="images/logo.png" alt="White Water Rafting Adventures logo" id="site-logo">
+        <img id="site-logo" src="images/logo.png" alt="White Water Rafting Adventures logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html" class="active">Contact Us</a>
+            <a href="trips.html" class="active">Trips</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Contact Us - White Water Rafting Adventures</title>
-        <meta name="description"
-            content="Contact White Water Rafting Adventures for inquiries, reservations, and customer support.">
-        <meta name="author" content="Wadson Chadeneneka Chirwa">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="styles/rafting.css">
-    </head>
+    <main class="container">
 
-    <section class="trips-hero container">
         <h1>Our Trips</h1>
-        <p>Trips for all skill levels — family friendly to extreme rapids.</p>
-        <a class="btn btn-cta" href="contact.html" style="margin-top:12px;display:inline-block;">Contact Us</a>
-    </section>
 
-    <body>
-
-        <section class="trip-grid container" aria-label="Trip offerings">
-            <article class="trip-card">
-                <img src="images/beginner-trip.jpg" alt="Beginner rapids rafting trip">
-                <h3>Beginner Rapids</h3>
-                <p>Perfect for families and first-time rafters. Duration: 2 hours.</p>
-                <p><strong>Price:</strong> $49 per person</p>
-            </article>
-
-            <article class="trip-card">
-                <img src="images/intermediate-trip.jpg" alt="Intermediate adventure rafting trip">
-                <h3>Intermediate Adventure</h3>
-                <p>For those with some rafting experience. Duration: 4 hours.</p>
-                <p><strong>Price:</strong> $79 per person</p>
-            </article>
-
-            <article class="trip-card">
-                <img src="images/extreme-trip.jpg" alt="Extreme challenge rafting trip">
-                <h3>Extreme Challenge</h3>
-                <p>Adventure seekers only! Previous rafting experience required. Duration: 6 hours.</p>
-                <p><strong>Price:</strong> $129 per person</p>
-            </article>
+        <!-- BEGINNER TRIP -->
+        <section class="trip-card">
+            <h2>Beginner Rapids</h2>
+            <img src="images/beginner-trip.jpg" alt="Beginner rapids rafting trip">
+            <p>Perfect for families and first-time rafters. Enjoy calm waters with gentle rapids in a scenic river
+                setting.</p>
+            <p><strong>Duration:</strong> 2 hours</p>
+            <p><strong>Price:</strong> $49 per person</p>
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
         </section>
 
-        <section class="trips-table container">
-            <h2>Trip Details</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Trip</th>
-                        <th>Difficulty</th>
-                        <th>Duration</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Beginner Rapids</td>
-                        <td>Easy</td>
-                        <td>2 hrs</td>
-                        <td>$49</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate Adventure</td>
-                        <td>Moderate</td>
-                        <td>4 hrs</td>
-                        <td>$79</td>
-                    </tr>
-                    <tr>
-                        <td>Extreme Challenge</td>
-                        <td>Hard</td>
-                        <td>6+ hrs</td>
-                        <td>$129</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- INTERMEDIATE TRIP -->
+        <section class="trip-card">
+            <h2>Intermediate Adventure</h2>
+            <img src="images/intermediate-trip.jpg" alt="Intermediate adventure rafting trip">
+            <p>For those with some rafting experience. Navigate moderate rapids while enjoying beautiful landscapes.
+            </p>
+            <p><strong>Duration:</strong> 4 hours</p>
+            <p><strong>Price:</strong> $79 per person</p>
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
         </section>
 
-        <!-- keep your equipment-section (you already have it) -->
-        <section class="equipment-section container">
+        <!-- EXTREME TRIP -->
+        <section class="trip-card">
+            <h2>Extreme Challenge</h2>
+            <img src="images/extreme-trip.jpg" alt="Extreme challenge rafting trip">
+            <p>Adventure seekers only! Experience thrilling rapids and intense excitement. Previous rafting experience
+                required.</p>
+            <p><strong>Duration:</strong> 6 hours</p>
+            <p><strong>Price:</strong> $129 per person</p>
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </section>
+
+        <!-- EQUIPMENT -->
+        <section class="equipment">
             <h2>Equipment Provided</h2>
-            <ul class="small">
+            <ul>
                 <li>Professional-grade rafts</li>
                 <li>Coast Guard approved life jackets</li>
                 <li>Paddles and safety helmets</li>
@@ -96,15 +71,21 @@
                 <li>First aid kits</li>
             </ul>
         </section>
-        <footer>
-            <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
-            <nav class="socialmedia" aria-label="social links">
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-            </nav>
-        </footer>
 
-    </body>
+    </main>
 
-</main>
+    <footer>
+        <p>&copy; 2025 White Water Rafting Adventures | Wadson Chadeneneka Chirwa</p>
+        <nav class="socialmedia" aria-label="social links">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="images/facebook.png"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="images/instagram.png"
+                    alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="images/twitter.png"
+                    alt="Twitter"></a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
